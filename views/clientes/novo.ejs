@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate') %>
+    <h1>Adicionar Cliente</h1>
+    <form action="/clientes" method="POST">
+        <div>
+            <b> <label for="Nome">Nome:</label></b>
+            <div>
+                <input type="text" name="cliente[Nome]" id="Nome">
+            </div>
+        <div>
+            <b> <label for="Sexo">Sexo:</label></b>
+            <div>
+                <input type="text" name="cliente[Sexo]" id="Sexo">
+            </div>
+        </div>
+        <div>
+            <b> <label for="Email">Email:</label></b>
+            <div>
+                <input type="email" name="cliente[Email]" id="Email">
+            </div>
+            <div>
+                <b> <label for="Nascimento">Nascimento:</label></b>
+                <div>
+                    <input type="date" name="cliente[Nascimento]" id="Nascimento">
+                </div>
+                <div>
+                    <b> <label for="CPF">CPF:</label></b>
+                    <div>
+                        <input type="number" name="cliente[CPF]" id="CPF">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <b> <label for="Endereço">Endereço:</label></b>
+            <div>
+                <input type="text" name="cliente[Endereço]" id="Endereço">
+            </div>
+        </div>
+        <div>
+            <b> <label for="Estado">Estado:</label></b>
+            <div>
+                <input type="text" name="cliente[Estado]" id="Estado">
+            </div>
+        </div>
+        <div>
+            <b> <label for="Cidade">Cidade:</label></b>
+            <div>
+                <input type="text" name="cliente[Cidade]" id="Cidade">
+            </div>
+        </div>
+        <p>
+        <div>
+            <button>Adicionar novo Cliente</button>
+        </div>
+        </p>
+    </form>

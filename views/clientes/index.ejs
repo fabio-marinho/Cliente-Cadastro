@@ -1,0 +1,35 @@
+<% layout('layouts/boilerplate') %>
+    <h2>LISTA DE CLIENTES</h2>
+    <ul>
+        <% for (let cliente of clientes){ %>
+            <b>
+                <div>Cliente:</div>
+            </b>
+            <li><a href="/clientes/<%=  cliente._id  %>">
+                    <div> <b> Nome: </b>
+                        <%= cliente.Nome %>
+                    </div>
+                    <div> <b> Sexo: </b>
+                        <%= cliente.Sexo %>
+                    </div>
+                    <div> <b> Email: </b>
+                        <%= cliente.Email %>
+                    </div>
+                    <div> <b> Nascimento:</b>
+                        <%= cliente.Nascimento %>
+                    </div>
+                    <div> <b> CPF: </b>
+                        <%= cliente.CPF %>
+                    </div>
+                    <div> <b> Endereço: </b>
+                        <%= cliente.Endereço %>
+                    </div>
+                    <div> <b> Estado: </b>
+                        <%= cliente.Estado %>
+                    </div>
+                    <div> <b> Cidade: </b>
+                        <%= cliente.Cidade %>
+                    </div>
+                </a></li>
+            <% } %>
+    </ul>

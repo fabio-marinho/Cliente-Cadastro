@@ -1,0 +1,52 @@
+<% layout('layouts/boilerplate') %>
+    <h2>Dados do Cliente</h2>
+    <div> <b> Nome: </b>
+        <div>
+            <%= cliente.Nome %>
+        </div>
+    </div>
+    <div> <b> Sexo: </b>
+        <div>
+          <%= cliente.Sexo %> 
+        </div>
+    </div>
+    <div> <b> Email: </b>
+        <div>
+            <%= cliente.Email %>
+        </div>
+        <div> <b> Data de Nascimento:</b>
+            <div>
+                <%= cliente.Nascimento %>
+            </div>
+    <div> <b> CPF: </b>
+        <div>
+            <%= cliente.CPF %>
+        </div>
+    </div>
+    </div>
+    <div> <b> Endereço:</b>
+        <div>
+            <%= cliente.Endereço %>
+        </div>
+    </div>
+    <div><b> Cidade: </b>
+        <div>
+            <%= cliente.Cidade %>
+        </div>
+    </div>
+    </div>
+    <div> <b> Estado: </b>
+        <div>
+            <%= cliente.Estado %>
+        </div>
+    </div>
+    <p>
+        <a href="/clientes/<%= cliente._id %>/editar">Editar</a>
+
+    </p>
+    <p>
+    <form action="/clientes/<%= cliente._id %>?_method=DELETE" method="POST">
+        <button>Apagar</button>
+    </form>
+    </p>
+   

@@ -1,0 +1,56 @@
+<% layout('layouts/boilerplate') %>
+    <h1>Editar Cliente</h1>
+    <form action="/clientes/<%= cliente._id %>?_method=PUT" method="POST">
+        <div>
+            <b> <label for="Nome">Nome:</label></b>
+            <div>
+                <input type="text" name="cliente[Nome]" id="Nome" value="<%= cliente.Nome %>">
+            </div>
+        <div>
+            <b> <label for="Sexo">Sexo:</label></b>
+            <div>
+                <input type="text" name="cliente[Sexo]" id="Sexo" value="<%= cliente.Sexo %>">
+            </div>
+        </div>
+        <div>
+            <b> <label for="Email">Email:</label></b>
+            <div>
+                <input type="email" name="cliente[Email]" id="Email" value="<%= cliente.Email %>">
+            </div>
+            <div>
+                <b> <label for="Nascimento">Nascimento</label></b>
+                <div>
+                    <input type="date" name="cliente[Nascimento]" id="Nascimento" value="<%= cliente.Nascimento %>">
+                </div>
+                <div>
+                    <b> <label for="CPF">CPF:</label> </b>
+                    <div>
+                        <input type="number" name="cliente[CPF]" id="CPF" value="<%= cliente.CPF %>">
+                    </div>
+                </div>
+            </div>
+            <div>
+                <b> <label for="Endereço">Endereço:</label></b>
+                <div>
+                    <input type="text" name="cliente[Endereço]" id="Endereço" value="<%= cliente.Endereço %>">
+                </div>
+            </div>
+            <div>
+                <b> <label for="Estado">Estado:</label></b>
+                <div>
+                    <input type="text" name="cliente[Estado]" id="Estado" value="<%= cliente.Estado %>">
+                </div>
+            </div>
+            <div>
+                <b> <label for="Cidade">Cidade:</label></b>
+                <div>
+                    <input type="text" name="cliente[Cidade]" id="Cidade" value="<%=  cliente.Cidade%>">
+                </div>
+            </div>
+            <p>
+            <div>
+                <button>Editar</button>
+                <button a href="/clientes/<%= cliente._id %>">Cancelar</a></button>
+            </div>
+            </p>
+    </form>
